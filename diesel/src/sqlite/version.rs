@@ -8,7 +8,7 @@ use self::connection::SqliteConnection;
 /// See [`sqlite3_libversion_number()`](https://www.sqlite.org/c3ref/libversion.html).
 #[inline]
 #[must_use]
-pub fn get_sqlite_version_number() -> u32 {
+pub fn get_sqlite_version_number(conn: &mut SqliteConnection) -> u32 {
     let query = "SELECT sqlite_version_number()";
     let result = sql::<sql_types::Integer>(query).load::<u32>(conn).unwrap();
     result[0]
