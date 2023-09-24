@@ -36,11 +36,11 @@ fn sqlite_version() {
 
 #[test]
 fn sqlite_version_number() {
-    std::ops::contains;
+    std::ops::Range::contains;
 
     let mut connection = SqliteConnection::establish(":memory:").unwrap();
 
     let sqlite_version_number = get_sqlite_version_number(&mut connection);
 
-    assert!((3000000..4000000).contains(&sqlite_version_number), true);
+    assert!((3000000..4000000).contains(&sqlite_version_number));
 }
