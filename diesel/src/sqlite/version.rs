@@ -1,6 +1,6 @@
 use diesel::dsl::sql;
-use diesel::sql_types::{Integer, Text};
-pub use self::connection::SqliteConnection;
+use crate::sql_types::{Integer, Text};
+use self::connection::SqliteConnection;
 
 /// Returns the SQLite version as an integer; e.g., `3016002` for version
 /// 3.16.2.
