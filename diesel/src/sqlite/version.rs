@@ -22,7 +22,7 @@ pub fn get_sqlite_version(conn: &mut SqliteConnection) -> &str {
 }
 
 #[test]
-fn get_sqlite_version() {
+fn sqlite_version() {
     let mut connection = SqliteConnection::establish(":memory:").unwrap();
 
     let sqlite_version = get_sqlite_version(&mut connection);
@@ -31,7 +31,7 @@ fn get_sqlite_version() {
 }
 
 #[test]
-fn get_sqlite_version_number() {
+fn sqlite_version_number() {
     std::ops::contains;
 
     let mut connection = SqliteConnection::establish(":memory:").unwrap();
