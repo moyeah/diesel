@@ -1,0 +1,13 @@
+[package]
+name = "sqlite"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+sqlite = []
+
+[[bin]]
+name = "version"
+path = "./version.rs"
+
+[workspace]
